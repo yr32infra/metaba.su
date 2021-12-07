@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang=ja>
+	<head>
+		<meta name=viewport content="width=device-width,initial-scale=1">
+		<meta charset=utf-8>
+		<title>めたばーす！</title>
+		<meta property=og:type content=website>
+		<meta property=og:title content=めたばーす！>
+		<meta property=og:description content=「めた」の「ばーす」！>
+		<meta property=og:site_name content=めたばーす！>
+		<meta property=og:image content=https://metaba.su/img/ogp.png>
+		<meta name=twitter:card content=summary_large_image>
+		<meta name=twitter:site content=@yanorei32>
+		<meta name=twitter:creator content=@yanorei32>
+		<link rel=icon type=image/png href=img/favicon.png>
+		<style>
+			html, body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				border: 0;
+			}
+			body {
+				font-size: 125%;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+			.outer {
+				height: 100%;
+				position: relative;
+			}
+			.inner {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				top: 0;
+				margin: auto;
+				width: min(800px, 100%);
+				background-color: #ffffffc0;
+				height: 11em;
+				color: #333333;
+			}
+			a, a:visited, a:hover, a:active {
+				color: inherit;
+			}
+		</style>
+		<script>
+			addEventListener('load', () => {
+				document.body.style.backgroundImage =
+					`url('img/metaba.su.${Math.floor(Math.random() * 1)}.jpg')`;
+			});
+		</script>
+	</head>
+	<body>
+		<div class=outer>
+			<div class=inner>
+				<center>
+					<h1><ruby>めたばーす！<rt>metaba.su</rt></ruby></h1>
+					<hr>
+					<p><a href=https://kuso.domains/>kuso.domains</a></p>
+				</center>
+			</div>
+		</div>
+	</body>
+</html>
+<!-- https://github.com/yanorei32/metaba.su -->
