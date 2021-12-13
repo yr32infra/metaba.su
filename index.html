@@ -13,6 +13,8 @@
 		<meta name=twitter:site content=@yanorei32>
 		<meta name=twitter:creator content=@yanorei32>
 		<link rel=icon type=image/png href=img/favicon.png>
+		<link href="https://fonts.googleapis.com/css?family=Kosugi+Maru" rel=stylesheet>
+		<link href="https://fonts.googleapis.com/css?family=Oxygen" rel=stylesheet>
 		<style>
 			html, body {
 				width: 100%;
@@ -22,6 +24,7 @@
 				border: 0;
 			}
 			body {
+				font-family: 'Oxygen', 'Kosugi Maru';
 				font-size: 125%;
 				background-image: url('img/metaba.su.0.jpg');
 				background-size: cover;
@@ -41,7 +44,7 @@
 				margin: auto;
 				width: min(800px, 100%);
 				background-color: #ffffffc0;
-				height: 11em;
+				height: 10em;
 				color: #333333;
 			}
 			a, a:visited, a:hover, a:active {
@@ -51,21 +54,23 @@
 				border: none;
 				border-top: 2px solid #808080;
 			}
+			rt {
+				line-height: 10px;
+				margin-bottom: 10px;
+			}
+			div.domain {
+				font-size: 50%;
+			}
 		</style>
-		<!--
-		<script>
-			addEventListener('pageshow', () => {
-				document.body.style.backgroundImage =
-					`url('img/metaba.su.${Math.floor(Math.random() * 1)}.jpg')`;
-			});
-		</script>
-		-->
 	</head>
 	<body>
 		<div class=outer>
 			<div class=inner>
 				<center>
-					<h1><ruby>めたばーす！<rt>metaba.su</rt></ruby></h1>
+					<h1>
+						<div class=domain>metaba.su</div>
+						めたばーす！
+					</h1>
 					<hr>
 					<p><a href=https://kuso.domains/>kuso.domains</a></p>
 				</center>
