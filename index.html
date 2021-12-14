@@ -12,6 +12,7 @@
 		<meta name=twitter:card content=summary_large_image>
 		<meta name=twitter:site content=@yanorei32>
 		<meta name=twitter:creator content=@yanorei32>
+		<meta http-equiv=X-UA-Compatible content="IE=edge">
 		<link rel=icon type=image/png href=imgs/favicon.png>
 		<link href="https://fonts.googleapis.com/css?family=Kosugi+Maru" rel=stylesheet>
 		<link href="https://fonts.googleapis.com/css?family=Oxygen" rel=stylesheet>
@@ -36,7 +37,8 @@
 			}
 			.content {
 				width: calc(min(800px, calc(100vw - 40px)) - 40px);
-				background-color: #ffffffc0;
+				/* IE does not support #ffffffc0 style transparency */
+				background-color: rgba(255, 255, 255, 0.75);
 				padding: 1px 20px;
 				margin: 50px auto;
 				border-radius: 5px;
@@ -54,7 +56,8 @@
 				top: 0;
 				margin: auto;
 				width: min(800px, calc(100vw - 40px));
-				background-color: #ffffffc0;
+				/* IE does not support #ffffffc0 style transparency */
+				background-color: rgba(255, 255, 255, 0.75);
 				height: 10em;
 			}
 			a, a:visited, a:hover, a:active {
@@ -127,6 +130,38 @@
 				margin-right: 10px;
 				border-radius: 50%;
 				background-color: gray;
+			}
+
+			/* Branch for MS Edge */
+			@supports (-ms-ime-align:auto) {
+				.inner {
+					border-radius: 0;
+				}
+				.content {
+					max-width: 760px;
+				}
+				.gallery > .scroller {
+					border-radius: 0;
+				}
+				.gallery > .scroller > div > img {
+					height: auto;
+				}
+			}
+
+			/* Branch for IE */
+			@media all and (-ms-high-contrast: none) {
+				.inner {
+					border-radius: 0;
+				}
+				.content {
+					max-width: 760px;
+				}
+				.gallery > .scroller {
+					border-radius: 0;
+				}
+				.gallery > .scroller > div > img {
+					height: auto;
+				}
 			}
 		</style>
 	</head>
