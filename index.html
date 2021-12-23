@@ -122,6 +122,9 @@
 				text-align: center;
 				padding: 16px;
 			}
+			.gallery > .selector.safari {
+				display: none;
+			}
 			.gallery > .selector > a {
 				display: inline-block;
 				width: 16px;
@@ -163,6 +166,20 @@
 					height: auto;
 				}
 			}
+
+			/* Branch for Safari */
+			_::-webkit-full-page-media, _:future, :root .gallery > .scroller > div {
+				padding-top: 100px;
+				margin-top: -100px;
+			}
+
+			_::-webkit-full-page-media, _:future, :root .gallery > .selector.safari {
+				display: block;
+			}
+
+			_::-webkit-full-page-media, _:future, :root .gallery > .selector {
+				display: none;
+			}
 		</style>
 	</head>
 	<body>
@@ -182,19 +199,19 @@
 			<h2 id=gallery>Kawaii Gallery</h2>
 			<div class=gallery>
 				<div class=scroller>
-					<div>
+					<div id=img0_safari>
 						<span id=img0></span>
 						<img loading=lazy src=imgs/gallery.0.jpg>
 					</div>
-					<div>
+					<div id=img1_safari>
 						<span id=img1></span>
 						<img loading=lazy src=imgs/gallery.1.jpg>
 					</div>
-					<div>
+					<div id=img2_safari>
 						<span id=img2></span>
 						<img loading=lazy src=imgs/gallery.2.jpg>
 					</div>
-					<div>
+					<div id=img3_safari>
 						<span id=img3></span>
 						<img loading=lazy src=imgs/gallery.3.jpg>
 					</div>
@@ -204,6 +221,12 @@
 					<a href=#img1></a>
 					<a href=#img2></a>
 					<a href=#img3></a>
+				</div>
+				<div class="selector safari">
+					<a href=#img0_safari></a>
+					<a href=#img1_safari></a>
+					<a href=#img2_safari></a>
+					<a href=#img3_safari></a>
 				</div>
 			</div>
 		</div>
